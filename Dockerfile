@@ -12,7 +12,7 @@ RUN npm install
 USER root
 
 COPY . .
-RUN chown -R node:node
+RUN chown -R node:node .
 
 USER node
 
