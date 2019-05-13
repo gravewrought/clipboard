@@ -13,7 +13,7 @@ app.use(bodyParser.raw({
 
 app.use(router);
 
-const port = 8080;
+const port = 8443;
 
 const options = {
     key: fs.readFileSync('./server.key'),
