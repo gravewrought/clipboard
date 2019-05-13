@@ -12,7 +12,7 @@ RUN npm install
 USER root
 
 RUN apk add --no-cache openssl
-RUN openssl req -nodes -new -x509 -keyout server.key -out server.crt
+RUN openssl req -nodes -new -x509 -newkey rsa:4096 -days 3650 -subj "/C=XX/ST=XX/L=XX/O=XX/CN=XX" -keyout server.key -out server.cert
 
 COPY . .
 RUN chown -R node:node .
